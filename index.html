@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blink to Survive</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="title">BLINK TO SURVIVE</div>
+      <div class="stats">
+        <div class="stat-block">
+          <div class="label">Stamina</div>
+          <div class="bar">
+            <div class="bar-fill" id="staminaBar"></div>
+          </div>
+        </div>
+        <div class="stat-block">
+          <div class="label">Monster</div>
+          <div><span id="distanceValue">100</span>m</div>
+        </div>
+        <div class="stat-block">
+          <div class="label">Status</div>
+          <div><span id="statusValue">SAFE</span></div>
+        </div>
+      </div>
+      <div class="tips">
+        Hold LEFT CLICK to close eyes (blink). Release to open eyes.<br />
+        Blink to recharge stamina. Keep eyes open to stay safe.
+      </div>
+    </div>
+    <canvas id="game" width="960" height="540"></canvas>
+    <div class="overlay" id="startScreen">
+      <div class="panel">
+        <h1>BLINK TO SURVIVE</h1>
+        <p>Hold SPACE to close your eyes. The monster moves when you blink.</p>
+        <button id="start">Start</button>
+      </div>
+    </div>
+    <div class="overlay" id="gameOver" hidden>
+      <div class="panel">
+        <h1>CAUGHT</h1>
+        <p>The monster reached you.</p>
+        <button id="restart">Restart</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
